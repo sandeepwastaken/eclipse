@@ -1,0 +1,71 @@
+// Methodology, data and limits: the text of the ⓘ panel. Edit freely, then rebuild.
+//   **text**          italic
+//   ****text****      bold
+//   ******text******  bold italic
+//   [label](https://…)  link
+//   # Heading         a section heading
+//   - item            a bullet point
+//   A blank line starts a new paragraph. Lines starting with // (like these) are ignored.
+
+Eclipse is an independent prototype for the 2026 NASA Space Apps Challenge "Lunar Landing Site Navigator", built with AI assistance. It is for education and early planning. It has not been certified for flight use, and NASA has not reviewed or endorsed it.
+
+# Sun and Earth positions
+- Sun and Earth positions relative to the Moon come from NASA/JPL's [DE440](https://ssd.jpl.nasa.gov/planets/eph_export.html) ephemeris, read with [NAIF SPICE](https://naif.jpl.nasa.gov/) and sampled every hour from 1 Jan 2026 to 1 Jan 2029. The kernels are de440s.bsp, moon_pa_de440_200625.bpc, moon_de440_250416.tf, naif0012.tls and pck00011.tpc. Their checksums are in public/data/ephemeris.json.
+- Positions are in MOON_ME_DE440_ME421, the Mean Earth/Polar Axis frame that LOLA and LROC maps use. Latitude is planetocentric. Longitude is positive east, from −180° to 180°.
+- Positions between the hourly samples are interpolated linearly. The unit tests check the app against SPICE azlcpo at five sites and five dates: elevation matches to 0.002° and azimuth to 0.01°.
+- The ephemeris already contains libration, the Moon's eccentric orbit and its 1.5° axial tilt. Libration is why Earth traces a small loop near the south-polar horizon, and the tilt is why polar sunlight changes through the year.
+- Directions are measured from the site itself. Measuring from the Moon's centre would shift Earth by up to about 0.26°.
+
+# Horizon and terrain
+- The observer stands 2 m above the LOLA surface. East, north and up come from the site's latitude and longitude. Elevation is measured from the local horizontal plane, and azimuth clockwise from north. At the exact poles, the longitude you enter sets which way is north.
+- For curated sites, the horizon is ray-cast every 0.25° of azimuth out to 400 km, with lunar curvature. The rays sample NASA LRO/LOLA elevation grids from the PDS: LDEM_875S_20M (20 m), LDEM_80S_80M (80 m), LDEM_75S_240M (240 m) and LDEM_128 (about 237 m). Each ray uses the finest grid that covers it.
+- For custom coordinates the browser ray-casts its own horizon. South of 75.5°S it uses a 480 m polar grid. Elsewhere it uses a global grid of about 5 km, which is coarse, and the app labels results from it.
+- When you walk in the surface view, the horizon is re-cast from where you stand through the site's 20 m tiles, and every metric follows.
+- The Moon has no atmosphere, so there is no refraction. The horizon is terrain and curvature only.
+- By default the Sun counts as up once its centre clears the terrain, which is half the disk. The app also shows how much of the disk is visible, using the Sun's real angular radius of about 0.27°. Earth counts as visible once its centre clears the terrain.
+
+# Metrics
+- Each percentage is the share of the mission window during which that condition holds. Rise and set times are interpolated between samples 5 to 30 minutes apart. Countdowns are then refined by bisection to under a second.
+- Irradiance is 1361 W/m² × (1 AU / Sun distance)² × the visible fraction of the disk, for a surface facing the Sun and before any panel losses.
+- All of these measure ****geometric opportunity****. Actual power depends on the arrays, pointing, temperature and dust. Actual communication depends on antennas, ground-station schedules and the link budget.
+
+# Earth end of the link: ground stations, link budget, rain
+- Five real deep-space antennas: Goldstone (California), Madrid (Spain) and Canberra (Australia) of the NASA Deep Space Network, ESA's Malargüe (Argentina) and JAXA's GREAT antenna at Usuda (Japan). Their WGS84 positions are rotated into the Moon-fixed frame with Earth's orientation (SPICE IAU_EARTH) from the same ephemeris, so "the Moon is up at Madrid" and "Earth is up at the site" come from one data set. The unit tests check Moon elevation at Goldstone and Canberra against [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/) to within 0.6° (Horizons adds light-time and aberration, which this check leaves out).
+- A station can carry the link when the landing site is at least 10° above its horizon, a typical operating mask. The panel shows which station has it now, the next 48 hours of handovers, and the one-way light time (about 1.3 s).
+- ****Link budget.**** Free-space loss over the real range, ground dish gain (aperture efficiency 0.6, 0.5 at Ka), system noise temperature (S 40 K, X 30 K, Ka 60 K), clear-sky gaseous absorption scaled by air mass, and a required Eb/N0 of 2.5 dB (turbo-coded, bit error rate 10⁻⁶) plus a 3 dB operating margin. The rate shown is the fastest that keeps that margin, up to an assumed modem limit (S 2 Mbit/s, X 20 Mbit/s, Ka 500 Mbit/s).
+- ****Lander radio (assumed, CLPS-class).**** S-band 5 W into a 3 dBi low-gain antenna; X-band 10 W into a 20 dBi medium-gain antenna; Ka-band (26 GHz) 10 W into a 0.5 m dish (about 40 dBi). These are stated assumptions, not any one mission's radio.
+- ****Rain.**** Rain fade uses ITU-R P.838 specific attenuation along the slant path through a 3.2 km rain layer, with a P.618-style path reduction, and the noise the rain itself adds. Ka-band is hit hard; S-band barely notices.
+- ****Weather data.**** Hourly total precipitation from ECMWF's ERA5 reanalysis (Copernicus C3S), 2018 to 2020, at the 0.25° cell over each station, streamed from the [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/dataset/era5-pds) (collection era5-pds) by scripts/fetch_station_weather.mjs and reduced to a small monthly table: the share of rainy hours and the rain rates exceeded 1% and 0.1% of the time. The app uses it as climatology, the chance of a rain outage in that calendar month, never as a forecast.
+- "Usable band after rain" counts mission time when Earth is above the site's terrain, a station has the Moon above 10°, and rain at that station does not cut the rate, weighted by the climatological chance of rain.
+
+# Rendering and frame rate
+- The view renders only when something changes. A quality governor reads the GPU's own timer for every frame where the browser allows it, and steps between four tiers (Low, Balanced, High, Ultra) to hold 60 frames per second: canvas resolution, anti-aliasing, the lens effects, shadow ray-march steps and procedural detail all scale with the tier. Fewer ray-march steps take longer strides, so shadows still reach the same distance.
+- Rocks use three levels of detail by size, and only rocks larger than 12 cm cast shadows. The shadow map is redrawn only when the Sun, the lander or the astronaut moves.
+- Auto is the default; the gauge button in the top bar pins a fixed tier instead.
+
+# Imagery and models
+- The globe's colour is the LRO/LROC WAC mosaic with LOLA polar reflectance, from the [NASA SVS CGI Moon Kit](https://svs.gsfc.nasa.gov/4720/) by Ernie Wright and Noah Petro. It loads at 2k and switches to 8k once that arrives.
+- Relief uses LOLA heights at true vertical scale unless you turn on exaggeration. Shadows are ray-marched through the same heights toward the DE440 Sun.
+- In the surface view, craters and rocks smaller than the elevation grid are procedural and only for looks. No calculation uses them.
+- Earth uses [Solar System Scope](https://www.solarsystemscope.com/textures/) textures (CC BY 4.0), based on NASA Blue Marble and Black Marble, with ocean reflectance corrected to measured values, plus cloud cover and city lights. It is oriented with SPICE IAU_EARTH. Its blue tint and bright limb come from a single-scattering model of the atmosphere.
+- Stars are from the Yale Bright Star Catalogue (BSC5), placed with the SPICE J2000-to-Moon rotation.
+- The lander is a photogrammetric Apollo Lunar Module model, scaled to the real vehicle at about 7 m tall. It appears at every site, including those planned for newer landers. Its descent and dust are illustrative.
+- The astronaut's walk and run are motion capture from the [CMU Graphics Lab Motion Capture Database](http://mocap.cs.cmu.edu/) (subject 02), retargeted onto the suit.
+- The logo is traced from the real near side in the LROC mosaic: the black shapes are where the maria are, and the ring is Tycho.
+
+# Site coordinates
+- [NASA Lunar Surface Data Book, ACD-50044 Rev A (2023), Table A2-2](https://ntrs.nasa.gov/citations/20230007818)
+- [NASA NSSDC, Apollo Landing Sites (LRO-measured LM positions)](https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html)
+- [LROC / NASA: Odysseus (IM-1) landing site, 80.13°S 1.44°E](https://www.lroc.asu.edu/images/1360)
+- [LROC: IM-2 landing region (intended site on Mons Mouton)](https://www.lroc.asu.edu/images/1401)
+- [LROC: Chandrayaan-3 landing site, 69.3741°S 32.32°E](https://www.lroc.asu.edu/images/1314)
+- [LROC: Chang'e 4 lander coordinates, 45.4562°S 177.5885°E](https://www.lroc.asu.edu/posts/1087)
+- [LROC: Firefly Blue Ghost landing region, 18.56°N 61.81°E](https://www.lroc.asu.edu/images/1400)
+
+# Not modelled
+- Light-time and aberration corrections, which are under 0.01° here.
+- Eclipses of the Sun by Earth.
+- Relay satellites, ground-station scheduling and competing missions, multipath and thermal effects. Station visibility, light time and rain are modelled (above), but the link budget rests on an assumed lander radio.
+- Terrain finer than the grids above, and the lander blocking the Sun or Earth. The 3D view draws that blocking, but the numbers ignore it.
+
+NASA data and imagery are used under the [NASA media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). The app uses no NASA insignia.

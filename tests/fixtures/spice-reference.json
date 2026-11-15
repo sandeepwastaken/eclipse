@@ -1,0 +1,405 @@
+{
+ "note": "SPICE azlcpo, geometric, observer on 1737.4 km sphere",
+ "rows": [
+  {
+   "site": "connecting-ridge",
+   "lat": -89.4632,
+   "lon": -137.49,
+   "utc": "2026-11-14T12:00:00Z",
+   "sun": {
+    "azimuthDeg": 258.0055805392352,
+    "elevationDeg": 1.4451395302058252,
+    "rangeKm": 147798043.78490266
+   },
+   "earth": {
+    "azimuthDeg": 135.5404523032401,
+    "elevationDeg": -4.504498108554833,
+    "rangeKm": 405442.0609656684
+   }
+  },
+  {
+   "site": "connecting-ridge",
+   "lat": -89.4632,
+   "lon": -137.49,
+   "utc": "2026-11-20T07:30:00Z",
+   "sun": {
+    "azimuthDeg": 187.2947297564943,
+    "elevationDeg": 1.0111097955583357,
+    "rangeKm": 148031975.2181574
+   },
+   "earth": {
+    "azimuthDeg": 130.27913162119762,
+    "elevationDeg": 3.2175296114146064,
+    "rangeKm": 381903.91398638755
+   }
+  },
+  {
+   "site": "connecting-ridge",
+   "lat": -89.4632,
+   "lon": -137.49,
+   "utc": "2027-03-03T18:45:00Z",
+   "sun": {
+    "azimuthDeg": 9.117330964110314,
+    "elevationDeg": -0.09281439418493297,
+    "rangeKm": 148050779.69565627
+   },
+   "earth": {
+    "azimuthDeg": 137.81948739377233,
+    "elevationDeg": -3.916905917881688,
+    "rangeKm": 405166.9795023955
+   }
+  },
+  {
+   "site": "connecting-ridge",
+   "lat": -89.4632,
+   "lon": -137.49,
+   "utc": "2027-09-15T00:20:00Z",
+   "sun": {
+    "azimuthDeg": 145.55810146219184,
+    "elevationDeg": 0.6144908466285263,
+    "rangeKm": 150863347.15880615
+   },
+   "earth": {
+    "azimuthDeg": 134.93745094532352,
+    "elevationDeg": 2.8098121610607834,
+    "rangeKm": 401567.7711166043
+   }
+  },
+  {
+   "site": "connecting-ridge",
+   "lat": -89.4632,
+   "lon": -137.49,
+   "utc": "2028-06-01T09:10:00Z",
+   "sun": {
+    "azimuthDeg": 214.17888551128192,
+    "elevationDeg": -1.5110753390178413,
+    "rangeKm": 151797048.64571077
+   },
+   "earth": {
+    "azimuthDeg": 138.27540832993435,
+    "elevationDeg": -6.515738053201154,
+    "rangeKm": 370268.2761705874
+   }
+  },
+  {
+   "site": "malapert-massif",
+   "lat": -85.9948,
+   "lon": -0.23578,
+   "utc": "2026-11-14T12:00:00Z",
+   "sun": {
+    "azimuthDeg": 120.79709789955503,
+    "elevationDeg": -0.49368324115694107,
+    "rangeKm": 147798102.5716678
+   },
+   "earth": {
+    "azimuthDeg": 358.316822353371,
+    "elevationDeg": -0.11855942977854551,
+    "rangeKm": 405309.1823195617
+   }
+  },
+  {
+   "site": "malapert-massif",
+   "lat": -85.9948,
+   "lon": -0.23578,
+   "utc": "2026-11-20T07:30:00Z",
+   "sun": {
+    "azimuthDeg": 50.19394900072802,
+    "elevationDeg": 4.1123531632841575,
+    "rangeKm": 148031881.28356445
+   },
+   "earth": {
+    "azimuthDeg": 352.9488828304832,
+    "elevationDeg": 7.54147564713205,
+    "rangeKm": 381773.4615334309
+   }
+  },
+  {
+   "site": "malapert-massif",
+   "lat": -85.9948,
+   "lon": -0.23578,
+   "utc": "2027-03-03T18:45:00Z",
+   "sun": {
+    "azimuthDeg": 231.96593345160883,
+    "elevationDeg": -3.0939940733325395,
+    "rangeKm": 148050870.6559196
+   },
+   "earth": {
+    "azimuthDeg": 0.5862263314101869,
+    "elevationDeg": 0.48537567048150876,
+    "rangeKm": 405033.56312441075
+   }
+  },
+  {
+   "site": "malapert-massif",
+   "lat": -85.9948,
+   "lon": -0.23578,
+   "utc": "2027-09-15T00:20:00Z",
+   "sun": {
+    "azimuthDeg": 8.330215101490381,
+    "elevationDeg": 5.020314437643063,
+    "rangeKm": 150863213.75391003
+   },
+   "earth": {
+    "azimuthDeg": 357.64605716687134,
+    "elevationDeg": 7.192400013710031,
+    "rangeKm": 401435.4644428591
+   }
+  },
+  {
+   "site": "malapert-massif",
+   "lat": -85.9948,
+   "lon": -0.23578,
+   "utc": "2028-06-01T09:10:00Z",
+   "sun": {
+    "azimuthDeg": 76.87618812418371,
+    "elevationDeg": -0.15863210191840352,
+    "rangeKm": 151797007.64039916
+   },
+   "earth": {
+    "azimuthDeg": 1.05406207305634,
+    "elevationDeg": -2.112011853737593,
+    "rangeKm": 370135.10454757535
+   }
+  },
+  {
+   "site": "apollo-11",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "utc": "2026-11-14T12:00:00Z",
+   "sun": {
+    "azimuthDeg": 91.4856901844161,
+    "elevationDeg": -7.07222429636178,
+    "rangeKm": 147798301.5112637
+   },
+   "earth": {
+    "azimuthDeg": 277.5871892680124,
+    "elevationDeg": 64.32001791285359,
+    "rangeKm": 403742.817341776
+   }
+  },
+  {
+   "site": "apollo-11",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "utc": "2026-11-20T07:30:00Z",
+   "sun": {
+    "azimuthDeg": 94.83238785567384,
+    "elevationDeg": 63.57572772677107,
+    "rangeKm": 148030450.00276232
+   },
+   "earth": {
+    "azimuthDeg": 261.4298074115017,
+    "elevationDeg": 58.846897434133474,
+    "rangeKm": 380517.4640777949
+   }
+  },
+  {
+   "site": "apollo-11",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "utc": "2027-03-03T18:45:00Z",
+   "sun": {
+    "azimuthDeg": 272.57642844378336,
+    "elevationDeg": -61.81637438519824,
+    "rangeKm": 148052308.3003233
+   },
+   "earth": {
+    "azimuthDeg": 276.73554409910696,
+    "elevationDeg": 66.65093005224149,
+    "rangeKm": 403456.3021536854
+   }
+  },
+  {
+   "site": "apollo-11",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "utc": "2027-09-15T00:20:00Z",
+   "sun": {
+    "azimuthDeg": 263.59959665086507,
+    "elevationDeg": 74.49399078985033,
+    "rangeKm": 150861691.63831416
+   },
+   "earth": {
+    "azimuthDeg": 260.86416415088775,
+    "elevationDeg": 63.53308656011782,
+    "rangeKm": 400100.63575667766
+   }
+  },
+  {
+   "site": "apollo-11",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "utc": "2028-06-01T09:10:00Z",
+   "sun": {
+    "azimuthDeg": 89.17263807969819,
+    "elevationDeg": 36.79579109664334,
+    "rangeKm": 151795962.19231394
+   },
+   "earth": {
+    "azimuthDeg": 283.3730647138408,
+    "elevationDeg": 66.70419041537217,
+    "rangeKm": 368478.7517032242
+   }
+  },
+  {
+   "site": "change-4",
+   "lat": -45.4562,
+   "lon": 177.5885,
+   "utc": "2026-11-14T12:00:00Z",
+   "sun": {
+    "azimuthDeg": 293.7049895129725,
+    "elevationDeg": 23.61884088345546,
+    "rangeKm": 147797391.51345482
+   },
+   "earth": {
+    "azimuthDeg": 180.73464194200295,
+    "elevationDeg": -48.580510532080886,
+    "rangeKm": 406610.533257183
+   }
+  },
+  {
+   "site": "change-4",
+   "lat": -45.4562,
+   "lon": 177.5885,
+   "utc": "2026-11-20T07:30:00Z",
+   "sun": {
+    "azimuthDeg": 240.04038256338643,
+    "elevationDeg": -24.230057530194863,
+    "rangeKm": 148032718.9100451
+   },
+   "earth": {
+    "azimuthDeg": 173.6597174973542,
+    "elevationDeg": -40.72933732439525,
+    "rangeKm": 383136.7286854395
+   }
+  },
+  {
+   "site": "change-4",
+   "lat": -45.4562,
+   "lon": 177.5885,
+   "utc": "2027-03-03T18:45:00Z",
+   "sun": {
+    "azimuthDeg": 62.23407747494613,
+    "elevationDeg": 23.837335024042744,
+    "rangeKm": 148050074.72758326
+   },
+   "earth": {
+    "azimuthDeg": 184.10422634665426,
+    "elevationDeg": -47.91297279336413,
+    "rangeKm": 406339.7056184943
+   }
+  },
+  {
+   "site": "change-4",
+   "lat": -45.4562,
+   "lon": 177.5885,
+   "utc": "2027-09-15T00:20:00Z",
+   "sun": {
+    "azimuthDeg": 194.28997345458524,
+    "elevationDeg": -42.57031266211359,
+    "rangeKm": 150864541.13795042
+   },
+   "earth": {
+    "azimuthDeg": 179.78457632700096,
+    "elevationDeg": -41.29335355430788,
+    "rangeKm": 402801.1027504522
+   }
+  },
+  {
+   "site": "change-4",
+   "lat": -45.4562,
+   "lon": 177.5885,
+   "utc": "2028-06-01T09:10:00Z",
+   "sun": {
+    "azimuthDeg": 262.9295158700493,
+    "elevationDeg": -8.393468313383536,
+    "rangeKm": 151797256.43907455
+   },
+   "earth": {
+    "azimuthDeg": 185.0406384914767,
+    "elevationDeg": -50.46294491936417,
+    "rangeKm": 371413.40145758283
+   }
+  },
+  {
+   "site": "near-north-pole",
+   "lat": 89.99,
+   "lon": 45.0,
+   "utc": "2026-11-14T12:00:00Z",
+   "sun": {
+    "azimuthDeg": 104.47091802123713,
+    "elevationDeg": -1.5554808169888288,
+    "rangeKm": 147798134.76332602
+   },
+   "earth": {
+    "azimuthDeg": 226.92330962881658,
+    "elevationDeg": 3.638144044198136,
+    "rangeKm": 405195.3555838637
+   }
+  },
+  {
+   "site": "near-north-pole",
+   "lat": 89.99,
+   "lon": 45.0,
+   "utc": "2026-11-20T07:30:00Z",
+   "sun": {
+    "azimuthDeg": 175.19377201182564,
+    "elevationDeg": -1.5349439000871252,
+    "rangeKm": 148032052.41588137
+   },
+   "earth": {
+    "azimuthDeg": 232.2364781038263,
+    "elevationDeg": -4.07846667074836,
+    "rangeKm": 382125.0048909442
+   }
+  },
+  {
+   "site": "near-north-pole",
+   "lat": 89.99,
+   "lon": 45.0,
+   "utc": "2027-03-03T18:45:00Z",
+   "sun": {
+    "azimuthDeg": 353.372151228083,
+    "elevationDeg": 0.6115542454879671,
+    "rangeKm": 148050758.33719364
+   },
+   "earth": {
+    "azimuthDeg": 224.6490455711848,
+    "elevationDeg": 3.03556043280036,
+    "rangeKm": 404956.2860403836
+   }
+  },
+  {
+   "site": "near-north-pole",
+   "lat": 89.99,
+   "lon": 45.0,
+   "utc": "2027-09-15T00:20:00Z",
+   "sun": {
+    "azimuthDeg": 216.93622100160854,
+    "elevationDeg": -1.0505056583279406,
+    "rangeKm": 150863397.64493892
+   },
+   "earth": {
+    "azimuthDeg": 227.57366714600204,
+    "elevationDeg": -3.6770248518096293,
+    "rangeKm": 401764.3695050374
+   }
+  },
+  {
+   "site": "near-north-pole",
+   "lat": 89.99,
+   "lon": 45.0,
+   "utc": "2028-06-01T09:10:00Z",
+   "sun": {
+    "azimuthDeg": 148.31779795461506,
+    "elevationDeg": 1.0741669812530064,
+    "rangeKm": 151796970.25971812
+   },
+   "earth": {
+    "azimuthDeg": 224.17746593278974,
+    "elevationDeg": 5.587186498793723,
+    "rangeKm": 369901.9550623072
+   }
+  }
+ ]
+}

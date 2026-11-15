@@ -1,0 +1,8 @@
+{
+ "projection": "south polar stereographic, sphere R=1737.4 km, lon 0 up, 90E right",
+ "n": 1906,
+ "scaleM": 480.0,
+ "offsetPx": 952.5,
+ "encoding": "uint16 = DN + 32768, height_m = DN * 0.5, R = high byte, G = low byte",
+ "source": "LOLA LDEM_75S_240M (PDS LRO-L-LOLA-4-GDR-V1.0), 2x2 block mean"
+}

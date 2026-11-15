@@ -1,0 +1,12 @@
+{
+ "walk": {
+  "cycleSeconds": 1.1,
+  "strideMetersModel": 1.8622782515428313,
+  "speedModelPerS": 1.692980228675301
+ },
+ "run": {
+  "cycleSeconds": 0.7666666666666667,
+  "strideMetersModel": 2.841440410051775,
+  "speedModelPerS": 3.706226621806663
+ }
+}

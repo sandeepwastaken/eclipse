@@ -1,0 +1,15 @@
+[
+  { "id": "sunrise", "text": "Sunrise at the site. Arrays are generating." },
+  { "id": "sunset", "text": "Sunset. Switching to battery." },
+  { "id": "earthrise", "text": "Earthrise. Acquisition of signal." },
+  { "id": "earthset", "text": "Earthset. Loss of signal." },
+  { "id": "handover-goldstone", "text": "Handover to Goldstone." },
+  { "id": "handover-madrid", "text": "Handover to Madrid." },
+  { "id": "handover-canberra", "text": "Handover to Canberra." },
+  { "id": "handover-malargue", "text": "Handover to Malargüe." },
+  { "id": "handover-usuda", "text": "Handover to Usuda." },
+  { "id": "touchdown", "text": "Contact light. Engine stop. We're on the surface." },
+  { "id": "downlink-received", "text": "Downlink complete. Image received." },
+  { "id": "downlink-lost", "text": "We've lost the signal." },
+  { "id": "voice-on", "text": "Flight, comm check. Loud and clear." }
+]

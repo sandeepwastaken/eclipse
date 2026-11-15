@@ -1,0 +1,54 @@
+{
+ "version": 2,
+ "frame": "MOON_ME_DE440_ME421",
+ "frameDescription": "Moon Mean Earth/Polar Axis (DE440 realization aligned to DE421 ME)",
+ "origin": "MOON_CENTER",
+ "reference": "NASA/JPL DE440 via NAIF SPICE (spiceypy)",
+ "units": "km",
+ "aberrationCorrection": "NONE",
+ "startUtc": "2026-01-01T00:00:00Z",
+ "endUtc": "2029-01-01T00:00:00Z",
+ "stepSeconds": 3600,
+ "count": 26305,
+ "stride": 14,
+ "dtype": "float32-le",
+ "columns": [
+  "sunX",
+  "sunY",
+  "sunZ",
+  "earthX",
+  "earthY",
+  "earthZ",
+  "qJ2000X",
+  "qJ2000Y",
+  "qJ2000Z",
+  "qJ2000W",
+  "qEarthX",
+  "qEarthY",
+  "qEarthZ",
+  "qEarthW"
+ ],
+ "sha256": "8196d3799b3146da0ac62d8e24467e9988961d61e806315f8b8838f8d52d979e",
+ "kernels": [
+  {
+   "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls",
+   "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+  },
+  {
+   "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_de440_250416.tf",
+   "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768"
+  },
+  {
+   "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de440_200625.bpc",
+   "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f"
+  },
+  {
+   "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+   "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+  },
+  {
+   "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+   "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+  }
+ ]
+}

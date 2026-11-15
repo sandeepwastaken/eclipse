@@ -1,0 +1,6 @@
+{
+ "heightMinM": -9200.0,
+ "heightMaxM": 10800.0,
+ "source": "LOLA LDEM_16 (PDS), box-resampled",
+ "layout": "equirectangular, column 0 = 180\u00b0W, row 0 = 90\u00b0N"
+}

@@ -1,0 +1,58 @@
+{
+  "convention": "Planetocentric latitude (north positive) and east-positive longitude in [-180, 180), Moon Mean Earth/Polar Axis frame (DE421 cartographic, as used by LOLA and LROC).",
+  "sources": {
+    "databook": {
+      "label": "NASA Lunar Surface Data Book, ACD-50044 Rev A (2023), Table A2-2",
+      "url": "https://ntrs.nasa.gov/citations/20230007818"
+    },
+    "nssdc": {
+      "label": "NASA NSSDC, Apollo Landing Sites (LRO-measured LM positions)",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+    },
+    "lroc-im1": {
+      "label": "LROC / NASA: Odysseus (IM-1) landing site, 80.13°S 1.44°E",
+      "url": "https://www.lroc.asu.edu/images/1360"
+    },
+    "lroc-im2": {
+      "label": "LROC: IM-2 landing region (intended site on Mons Mouton)",
+      "url": "https://www.lroc.asu.edu/images/1401"
+    },
+    "lroc-ch3": {
+      "label": "LROC: Chandrayaan-3 landing site, 69.3741°S 32.32°E",
+      "url": "https://www.lroc.asu.edu/images/1314"
+    },
+    "lroc-ce4": {
+      "label": "LROC: Chang'e 4 lander coordinates, 45.4562°S 177.5885°E",
+      "url": "https://www.lroc.asu.edu/posts/1087"
+    },
+    "lroc-bg1": {
+      "label": "LROC: Firefly Blue Ghost landing region, 18.56°N 61.81°E",
+      "url": "https://www.lroc.asu.edu/images/1400"
+    }
+  },
+  "sites": [
+    { "id": "shackleton-rim", "name": "Shackleton Rim", "code": "R04", "group": "south-pole", "lat": -89.7668, "lon": -171.87, "source": "databook", "lander": "clps", "blurb": "Ridge on Shackleton crater's rim, a few kilometres from the south pole. Among the best-lit terrain on the Moon." },
+    { "id": "connecting-ridge", "name": "Connecting Ridge", "code": "R01", "group": "south-pole", "lat": -89.4632, "lon": -137.49, "source": "databook", "lander": "clps", "blurb": "Ridge linking the rims of Shackleton and de Gerlache craters." },
+    { "id": "shackleton-rim-b", "name": "Shackleton Rim B", "code": "LM1", "group": "south-pole", "lat": -89.5244, "lon": 56.30993, "source": "databook", "lander": "clps", "blurb": "Shackleton's rim on the opposite side of the crater from R04." },
+    { "id": "peak-near-shackleton", "name": "Peak Near Shackleton", "code": "R07", "group": "south-pole", "lat": -88.811, "lon": 123.6901, "source": "databook", "lander": "clps", "blurb": "Isolated high peak about 40 km from the pole." },
+    { "id": "de-gerlache-rim", "name": "de Gerlache Rim 1", "code": "R11", "group": "south-pole", "lat": -88.6834, "lon": -67.9321, "source": "databook", "lander": "clps", "blurb": "Raised rim of de Gerlache crater, Earth-facing side of the pole." },
+    { "id": "de-gerlache-kocher", "name": "de Gerlache–Kocher Massif", "code": "R42", "group": "south-pole", "lat": -85.8296, "lon": -116.322, "source": "databook", "lander": "clps", "blurb": "Massif between de Gerlache and Kocher craters, on the far-side-facing hemisphere." },
+    { "id": "malapert-massif", "name": "Malapert Massif", "code": "R23", "group": "south-pole", "lat": -85.9948, "lon": -0.23578, "source": "databook", "lander": "clps", "blurb": "Five-kilometre-high massif near the prime meridian; long, Earth-facing views." },
+    { "id": "leibnitz-beta", "name": "Leibnitz Beta Plateau", "code": "R20", "group": "south-pole", "lat": -85.4266, "lon": 31.74276, "source": "databook", "lander": "clps", "blurb": "High plateau also called Mons Mouton, a NASA Artemis candidate region." },
+    { "id": "nobile-rim-1", "name": "Nobile Rim 1", "code": "R06", "group": "south-pole", "lat": -85.4381, "lon": 37.36667, "source": "databook", "lander": "clps", "blurb": "Rim of Nobile crater, beside the Leibnitz Beta plateau." },
+    { "id": "haworth", "name": "Haworth", "code": "HAW", "group": "south-pole", "lat": -86.7639, "lon": -22.777, "source": "databook", "lander": "clps", "blurb": "Reference point at Haworth crater, a permanently shadowed crater on the near side." },
+    { "id": "cabeus-wall", "name": "Cabeus Exterior Wall 1", "code": "NPA", "group": "south-pole", "lat": -86.9243, "lon": -71.5651, "source": "databook", "lander": "clps", "blurb": "Outer wall of Cabeus, near the LCROSS impact crater." },
+    { "id": "amundsen-rim", "name": "Amundsen Rim", "code": "DM1", "group": "south-pole", "lat": -84.2287, "lon": 69.44396, "source": "databook", "lander": "clps", "blurb": "Rim of the 100-km Amundsen crater." },
+    { "id": "im1-odysseus", "name": "Odysseus (IM-1)", "code": "IM-1", "group": "missions", "lat": -80.13, "lon": 1.44, "source": "lroc-im1", "lander": "clps", "blurb": "Intuitive Machines' Nova-C lander touched down near Malapert A on 22 Feb 2024." },
+    { "id": "im2-mons-mouton", "name": "IM-2 target, Mons Mouton", "code": "IM-2", "group": "missions", "lat": -84.78, "lon": 29.13, "source": "lroc-im2", "lander": "clps", "blurb": "Intended IM-2 site on Mons Mouton. Athena landed nearby on 6 Mar 2025 but tipped over." },
+    { "id": "chandrayaan-3", "name": "Chandrayaan-3", "code": "CH-3", "group": "missions", "lat": -69.3741, "lon": 32.32, "source": "lroc-ch3", "lander": "clps", "blurb": "ISRO's Vikram lander, 23 Aug 2023. It was the first landing at high southern latitude." },
+    { "id": "change-4", "name": "Chang'e 4", "code": "CE-4", "group": "missions", "lat": -45.4562, "lon": 177.5885, "source": "lroc-ce4", "lander": "clps", "blurb": "The first far-side landing, in Von Kármán crater, 3 Jan 2019. Earth is never visible from here; it relays via Queqiao." },
+    { "id": "blue-ghost-1", "name": "Blue Ghost M1", "code": "BG-1", "group": "missions", "lat": 18.56, "lon": 61.81, "source": "lroc-bg1", "lander": "clps", "blurb": "Firefly's CLPS lander in Mare Crisium near Mons Latreille, 2 Mar 2025." },
+    { "id": "apollo-11", "name": "Apollo 11", "code": "A11", "group": "apollo", "lat": 0.67416, "lon": 23.47314, "source": "nssdc", "lander": "apollo", "blurb": "Tranquility Base, Eagle LM, 20 Jul 1969." },
+    { "id": "apollo-12", "name": "Apollo 12", "code": "A12", "group": "apollo", "lat": -3.0128, "lon": -23.4219, "source": "nssdc", "lander": "apollo", "blurb": "Ocean of Storms, beside Surveyor 3, 19 Nov 1969." },
+    { "id": "apollo-14", "name": "Apollo 14", "code": "A14", "group": "apollo", "lat": -3.64589, "lon": -17.47194, "source": "nssdc", "lander": "apollo", "blurb": "Fra Mauro highlands, 5 Feb 1971." },
+    { "id": "apollo-15", "name": "Apollo 15", "code": "A15", "group": "apollo", "lat": 26.13239, "lon": 3.6333, "source": "nssdc", "lander": "apollo", "blurb": "Hadley–Apennine, beside Hadley Rille, 30 Jul 1971." },
+    { "id": "apollo-16", "name": "Apollo 16", "code": "A16", "group": "apollo", "lat": -8.9734, "lon": 15.5011, "source": "nssdc", "lander": "apollo", "blurb": "Descartes highlands, 21 Apr 1972." },
+    { "id": "apollo-17", "name": "Apollo 17", "code": "A17", "group": "apollo", "lat": 20.1911, "lon": 30.7723, "source": "nssdc", "lander": "apollo", "blurb": "Taurus–Littrow valley, 11 Dec 1972." }
+  ]
+}

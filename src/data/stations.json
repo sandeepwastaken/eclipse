@@ -1,0 +1,7 @@
+[
+  { "id": "goldstone", "name": "Goldstone", "where": "California, USA", "agency": "NASA DSN", "dish": "DSS-26", "dishM": 34, "lat": 35.3357, "lon": -116.8731, "altM": 970 },
+  { "id": "madrid", "name": "Madrid", "where": "Robledo de Chavela, Spain", "agency": "NASA DSN", "dish": "DSS-56", "dishM": 34, "lat": 40.4243, "lon": -4.2512, "altM": 835 },
+  { "id": "canberra", "name": "Canberra", "where": "Tidbinbilla, Australia", "agency": "NASA DSN", "dish": "DSS-36", "dishM": 34, "lat": -35.3951, "lon": 148.9786, "altM": 685 },
+  { "id": "malargue", "name": "Malargüe", "where": "Mendoza, Argentina", "agency": "ESA ESTRACK", "dish": "DSA 3", "dishM": 35, "lat": -35.7760, "lon": -69.3983, "altM": 1550 },
+  { "id": "usuda", "name": "Usuda", "where": "Nagano, Japan", "agency": "JAXA", "dish": "GREAT (Misasa)", "dishM": 54, "lat": 36.1325, "lon": 138.3622, "altM": 1500 }
+]
