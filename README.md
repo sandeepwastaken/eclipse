@@ -283,7 +283,7 @@ tests/                   SPICE and Horizons validation, communications, browser 
 
 ## Team
 
-Team Voyager Z, NASA Space Apps Challenge 2026: Joey Girdhar, Sandeep Shenoy, Sameehan Devadiga, Vedansh Jalagam, Sashreek Pinjala, and Ashwath Satish.
+Team Voyager Z, NASA Space Apps Challenge 2026: Rhythmay Girdhar, Sandeep Shenoy, Sameehan Devadiga, Vedansh Jalagam, Sashreek Pinjala, and Ashwath Satish.
 
 ## Use of AI
 
